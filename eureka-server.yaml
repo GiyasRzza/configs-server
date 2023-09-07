@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: eureka-server
+
+info:
+  component: Eureka Server - Github - Localhost 
+eureka:
+  instance:
+    appname: eureka-server
+    hostname: eureka-server
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      default-zone: http://eureka-server:8761/eureka
+server:
+  port: 8763
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          commons:
+            util:
+          InetUtils: TRACE
